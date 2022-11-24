@@ -9,7 +9,8 @@ namespace Nhom19.Model
 {
     public class ConnectionP
     {
-        public static String user_id = "bo";
-        public static String pass = "123456";
+        public static String database = "Nhom19_ToysStore";
+        public static String user_id = "b";
+        public static String pass = "b";
     }
 }

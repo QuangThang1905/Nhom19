@@ -46,19 +46,127 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\User.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="AddCart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddCart.Designer.cs">
+      <DependentUpon>AddCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Business\CartItems.cs" />
+    <Compile Include="Business\Order.cs" />
+    <Compile Include="Business\OrderProduct.cs" />
+    <Compile Include="Business\Payment.cs" />
+    <Compile Include="Business\Toys.cs" />
+    <Compile Include="Business\User.cs" />
+    <Compile Include="Business\Variation.cs" />
+    <Compile Include="CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CartItemsDB.cs" />
     <Compile Include="Model\ConnectionP.cs" />
+    <Compile Include="Model\OrderDB.cs" />
+    <Compile Include="Model\OrderProductDB.cs" />
+    <Compile Include="Model\PaymentDB.cs" />
+    <Compile Include="Model\ToysDB.cs" />
     <Compile Include="Model\UserDB.cs" />
+    <Compile Include="Model\VariationDB.cs" />
+    <Compile Include="MyCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyCart.Designer.cs">
+      <DependentUpon>MyCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyOrder.Designer.cs">
+      <DependentUpon>MyOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyUser.Designer.cs">
+      <DependentUpon>MyUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment_Method.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment_Method.Designer.cs">
+      <DependentUpon>Payment_Method.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_Detail.Designer.cs">
+      <DependentUpon>Product_Detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RegisterCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterCustomer.Designer.cs">
+      <DependentUpon>RegisterCustomer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCart.resx">
+      <DependentUpon>AddCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyCart.resx">
+      <DependentUpon>MyCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyOrder.resx">
+      <DependentUpon>MyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUser.resx">
+      <DependentUpon>MyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetail.resx">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment_Method.resx">
+      <DependentUpon>Payment_Method.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_Detail.resx">
+      <DependentUpon>Product_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,6 +177,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegisterCustomer.resx">
+      <DependentUpon>RegisterCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

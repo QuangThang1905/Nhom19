@@ -12,79 +12,123 @@ namespace Nhom19.Model
 {
     public class UserDB
     {
-        public static bool isExistUser(String user_id)
+        public static String getCurrentUser()
         {
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection("data source=localhost; database=Hai;User ID = "+ConnectionP.user_id+"; Password = "+ConnectionP.pass);
+                conn = new SqlConnection("data source=localhost; database=" + ConnectionP.database + ";User ID = " + ConnectionP.user_id + "; Password = " + ConnectionP.pass);
                 conn.Open();
 
                 SqlCommand cm = new SqlCommand();
-                cm.CommandText = "IsExistUser_Proc";
+                cm.CommandText = "GetCurrentUser";
                 cm.CommandType = CommandType.StoredProcedure;
                 cm.Connection = conn;
 
-                cm.Parameters.Add("@user_id", SqlDbType.NVarChar).Value = user_id;
+               // cm.Parameters.Add("@user_id", SqlDbType.NVarChar).Value = user_id;
 
-                return (bool)cm.ExecuteScalar();
+                return (String)cm.ExecuteScalar();
             }
             catch (Exception)
             {
-                return false;
+                return "";
             }
             finally
             {
                 conn.Close();
             }
         }
-        public static bool isValidPassword(String user_id, String pass)
+        public static int registerCustomer(String user_id, String pass, String firstname, String lastname, String email, String phone_number)
         {
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection("data source=localhost; database=Hai;User ID = " + ConnectionP.user_id + "; Password = " + ConnectionP.pass);
+                conn = new SqlConnection("data source=localhost; database=" + ConnectionP.database + ";User ID =  bo; Password = 123456");
                 conn.Open();
 
                 SqlCommand cm = new SqlCommand();
-                cm.CommandText = "IsValidPassword_Proc";
+                cm.CommandText = "RegistCustomer";
                 cm.CommandType = CommandType.StoredProcedure;
                 cm.Connection = conn;
 
                 cm.Parameters.Add("@user_id", SqlDbType.NVarChar).Value = user_id;
                 cm.Parameters.Add("@pass", SqlDbType.NVarChar).Value = pass;
+                cm.Parameters.Add("@firstname", SqlDbType.NVarChar).Value = firstname;
+                cm.Parameters.Add("@lastname", SqlDbType.NVarChar).Value = lastname;
+                cm.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
+                cm.Parameters.Add("@phone_number", SqlDbType.NVarChar).Value = phone_number;
 
-                return (bool)cm.ExecuteScalar();
+                return cm.ExecuteNonQuery();
             }
             catch (Exception)
             {
-                return false;
+                return 1;
             }
             finally
             {
                 conn.Close();
             }
         }
-        public static bool isAdmin(String user_id)
+        public static User getUser()
         {
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection("data source=localhost; database=Hai;User ID = bo; Password = 123456");
+                conn = new SqlConnection("data source=localhost; database=" + ConnectionP.database + ";User ID = " + ConnectionP.user_id + "; Password = " + ConnectionP.pass);
                 conn.Open();
 
                 SqlCommand cm = new SqlCommand();
-                cm.CommandText = "IsAdmin_Proc";
+                cm.CommandText = "MyUser";
                 cm.CommandType = CommandType.StoredProcedure;
                 cm.Connection = conn;
 
-                cm.Parameters.Add("@user_id", SqlDbType.NVarChar).Value = user_id;
+                //cm.Parameters.Add("@variation_id", SqlDbType.NVarChar).Value = variation_id;
 
-                return (bool)cm.ExecuteScalar();
+                User user = new User();
+                SqlDataReader sdr = cm.ExecuteReader();
+                while (sdr.Read())
+                {
+                    user.User_id = Convert.ToString(sdr["user_id"]);
+                    user.Firstname = Convert.ToString(sdr["firstname"]);
+                    user.Lastname = Convert.ToString(sdr["lastname"]);
+                    user.Email = Convert.ToString(sdr["email"]);
+                    user.Phone_number = Convert.ToString(sdr["phone_number"]);
+                }
+
+                return user;
             }
             catch (Exception)
             {
-                return false;
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public static int editProfile(String firstname, String lastname, String phone_number, String email)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection("data source=localhost; database=" + ConnectionP.database + ";User ID = " + ConnectionP.user_id + "; Password = " + ConnectionP.pass);
+                conn.Open();
+
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = "EditProfile";
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.Connection = conn;
+
+                cm.Parameters.Add("@first_name", SqlDbType.NVarChar).Value = firstname;
+                cm.Parameters.Add("@last_name", SqlDbType.NVarChar).Value = lastname;
+                cm.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
+                cm.Parameters.Add("@phone_number", SqlDbType.NVarChar).Value = phone_number;
+
+                return cm.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                return 1;
             }
             finally
             {
