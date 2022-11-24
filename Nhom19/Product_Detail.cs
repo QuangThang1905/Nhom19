@@ -64,26 +64,13 @@ namespace Nhom19
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            button1.Hide();
+            button1.Show();
 
-            Boolean issoldout = VariationDB.isSoldOut(cb1.SelectedItem.ToString());
-            if (issoldout) //sold out
-            {
-                label10.Text = "Sold out";
-                label10.Show();
-                label14.Hide();
-                label15.Hide();
-            }
-            else
-            {
-                Variation variation = VariationDB.getVariation(cb1.SelectedItem.ToString());
-                label10.Hide();
-                label14.Text = variation.Color;
-                label14.Show();
-                label15.Text = variation.Size;
-                label15.Show();
-                button1.Show();
-            }
+            Variation variation = VariationDB.getVariation(cb1.SelectedItem.ToString());
+            label14.Text = variation.Color;
+            label14.Show();
+            label15.Text = variation.Size;
+            label15.Show();
 
         }
 

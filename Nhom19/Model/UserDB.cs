@@ -12,6 +12,39 @@ namespace Nhom19.Model
 {
     public class UserDB
     {
+        public static bool isAdmin()
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection("data source=localhost; database=" + ConnectionP.database + ";User ID = " + ConnectionP.user_id + "; Password = " + ConnectionP.pass);
+                conn.Open();
+
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = "IsAdmin";
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.Connection = conn;
+
+                //cm.Parameters.Add("@variation_id", SqlDbType.NVarChar).Value = variation_id;
+
+                bool result = true;
+                SqlDataReader sdr = cm.ExecuteReader();
+                while (sdr.Read())
+                {
+                    result = Convert.ToBoolean(sdr["is_admin"]);
+                }
+
+                return result;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public static String getCurrentUser()
         {
             SqlConnection conn = null;

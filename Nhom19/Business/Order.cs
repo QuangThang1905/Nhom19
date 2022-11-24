@@ -25,6 +25,7 @@ namespace Nhom19.Business
         private DateTime update_date;
 
         private Double money_total;
+        private String payment_method;
 
         public string Order_number { get => order_number; set => order_number = value; }
         public string User { get => user; set => user = value; }
@@ -42,5 +43,6 @@ namespace Nhom19.Business
         public DateTime Created_date { get => created_date; set => created_date = value; }
         public DateTime Update_date { get => update_date; set => update_date = value; }
         public double Money_total { get => money_total; set => money_total = value; }
+        public string Payment_method { get => payment_method; set => payment_method = value; }
     }
 }

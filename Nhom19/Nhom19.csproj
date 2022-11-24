@@ -52,6 +52,18 @@
     <Compile Include="AddCart.Designer.cs">
       <DependentUpon>AddCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddToy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddToy.Designer.cs">
+      <DependentUpon>AddToy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddVariations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVariations.Designer.cs">
+      <DependentUpon>AddVariations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Business\CartItems.cs" />
     <Compile Include="Business\Order.cs" />
     <Compile Include="Business\OrderProduct.cs" />
@@ -64,6 +76,12 @@
     </Compile>
     <Compile Include="CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -109,6 +127,12 @@
     <Compile Include="OrderDetail.Designer.cs">
       <DependentUpon>OrderDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdersAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersAdmin.Designer.cs">
+      <DependentUpon>OrdersAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +159,44 @@
     <Compile Include="RegisterCustomer.Designer.cs">
       <DependentUpon>RegisterCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToysAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToysAdmin.Designer.cs">
+      <DependentUpon>ToysAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePrice.Designer.cs">
+      <DependentUpon>UpdatePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStock.Designer.cs">
+      <DependentUpon>UpdateStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VariationsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VariationsAdmin.Designer.cs">
+      <DependentUpon>VariationsAdmin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCart.resx">
       <DependentUpon>AddCart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddToy.resx">
+      <DependentUpon>AddToy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddVariations.resx">
+      <DependentUpon>AddVariations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -158,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrderDetail.resx">
       <DependentUpon>OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersAdmin.resx">
+      <DependentUpon>OrdersAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
@@ -179,6 +239,18 @@
     </Compile>
     <EmbeddedResource Include="RegisterCustomer.resx">
       <DependentUpon>RegisterCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToysAdmin.resx">
+      <DependentUpon>ToysAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePrice.resx">
+      <DependentUpon>UpdatePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStock.resx">
+      <DependentUpon>UpdateStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VariationsAdmin.resx">
+      <DependentUpon>VariationsAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -45,7 +45,7 @@
             this.label12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(314, 40);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 30);
+            this.label12.Size = new System.Drawing.Size(86, 30);
             this.label12.TabIndex = 162;
             this.label12.Text = "ID:";
             // 
@@ -67,7 +67,7 @@
             this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(314, 89);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 30);
+            this.label13.Size = new System.Drawing.Size(86, 30);
             this.label13.TabIndex = 164;
             this.label13.Text = "ID:";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -91,7 +91,7 @@
             this.txt14.Location = new System.Drawing.Point(314, 142);
             this.txt14.Margin = new System.Windows.Forms.Padding(2);
             this.txt14.Name = "txt14";
-            this.txt14.Size = new System.Drawing.Size(73, 30);
+            this.txt14.Size = new System.Drawing.Size(86, 30);
             this.txt14.TabIndex = 165;
             this.txt14.Tag = "";
             this.txt14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

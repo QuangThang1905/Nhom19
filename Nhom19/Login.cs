@@ -42,10 +42,20 @@ namespace Nhom19
                 conn = new SqlConnection("data source=localhost; database=" + ConnectionP.database + ";User ID = " + ConnectionP.user_id + "; Password = " + ConnectionP.pass);
                 conn.Open();
 
-                Home home = new Home();
-                this.Hide();
-                home.Show();
-                
+                bool result = UserDB.isAdmin();
+
+                if (result)
+                {
+                    this.Hide();
+                    HomeAdmin home = new HomeAdmin();
+                    home.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    Home home = new Home();
+                    home.Show();
+                }
             }
             catch (Exception)
             {

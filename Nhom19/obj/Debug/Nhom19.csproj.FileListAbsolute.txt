@@ -19,3 +19,11 @@ C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.AddCart.resources
 C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.Login.resources
 C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.RegisterCustomer.resources
 C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.MyUser.resources
+C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.HomeAdmin.resources
+C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.ToysAdmin.resources
+C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.AddToy.resources
+C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.UpdatePrice.resources
+C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.VariationsAdmin.resources
+C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.AddVariations.resources
+C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.UpdateStock.resources
+C:\Users\Admin\source\repos\Nhom19\Nhom19\obj\Debug\Nhom19.OrdersAdmin.resources

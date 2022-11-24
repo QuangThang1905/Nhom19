@@ -33,9 +33,20 @@ namespace Nhom19
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Home home = new Home();
-            home.Show();
+            bool result = UserDB.isAdmin();
+
+            if (result)
+            {
+                this.Hide();
+                HomeAdmin home = new HomeAdmin();
+                home.Show();
+            }
+            else
+            {
+                this.Hide();
+                Home home = new Home();
+                home.Show();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
